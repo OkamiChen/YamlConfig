@@ -1,5 +1,5 @@
 # TableShard
-## 文件内容
+## config.yml文件内容
 ```yaml
 local:
     mysql:
@@ -29,4 +29,10 @@ production:
     mysql:
         host: 127.0.0.1
         port: 3306
-
+```
+## 读取
+```php
+<?php
+$file   = 'config.yml';
+yml_read($file);
+```
