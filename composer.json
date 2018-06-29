@@ -1,0 +1,23 @@
+{
+    "name": "okami-chen/yaml-config",
+    "type": "library",
+    "keywords": ["laravel"],
+    "description": "laravel yaml config",
+    "homepage": "https://github.com/okami-chen/yaml-config",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "OkamiChen",
+            "email": "x25125x@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/yaml": "^4.1"
+    },
+    "autoload": {
+        "files": [
+            "src/helper.php"
+        ]
+    }
+}
