@@ -1,18 +1,32 @@
 # TableShard
-## 创建
-```php
-use Illuminate\Database\Eloquent\Model;
+## 文件内容
+```yaml
+local:
+    mysql:
+        host: 127.0.0.1
+        port: 3307
+dev:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+qa:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+pre:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+gr:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+yc:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
+production:
+    mysql:
+        host: 127.0.0.1
+        port: 3306
 
-use OkamiChen\TableShard\Traits\TableShard;
-
-
-class User extends Model {
-    
-    use TableShard;
-
-}
-```
-## 查询
-```php
-User::where(['user_id'=>18])->first();
-```
