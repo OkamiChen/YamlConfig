@@ -34,16 +34,15 @@ production:
 ```php
 <?php
 $file   = 'config.yml';
-$data   = yml_read($file);
-$data['mysql']['port'] = 3307;
+$data   = Yaml::load($file);
 ```
 ## 写入
 ```php
 <?php
 $file   = 'config.yml';
-$data   = yml_read($file);
+$data   = Yaml::load($file);
 $data['mysql']['port'] = 3307;
-yml_write($file,$data);
+Yaml::save($file,$data);
 ```
 ## config.yml变化后的内容
 ```yaml

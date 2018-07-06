@@ -24,7 +24,7 @@ class Yaml {
      * @param array $data
      * @param string $env
      */
-    static public function write($file, $data, $env = null) {
+    static public function save($file, $data, $env = null) {
 
         if (!$env) {
             $env = env("APP_ENV");
