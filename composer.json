@@ -1,8 +1,8 @@
 {
     "name": "okami-chen/yaml-config",
     "type": "library",
-    "keywords": ["laravel"],
-    "description": "laravel yaml config",
+    "keywords": ["laravel","php"],
+    "description": "yaml config",
     "homepage": "https://github.com/okami-chen/yaml-config",
     "license": "MIT",
     "authors": [
@@ -13,12 +13,11 @@
     ],
     "require": {
         "php": ">=7.0.0",
-        "symfony/yaml": "^4.1",
-        "laravel/framework": "~5.0"
+        "symfony/yaml": "^4.1"
     },
     "autoload": {
-        "files": [
-            "src/helper.php"
-        ]
+        "prs-4": {
+            "OkamiChen\\YamlConfig\\":"src/"
+        }
     }
 }
