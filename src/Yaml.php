@@ -19,7 +19,7 @@ use Symfony\Component\Yaml\Yaml as Basic;
 class Yaml {
 
     /**
-     * 读取yaml配置
+     * 将配置写入到文件
      * @param string $file
      * @param array $data
      * @param string $env
@@ -42,7 +42,7 @@ class Yaml {
     }
     
     /**
-     * 读取yaml配置
+     * 读取配置文件
      * @param string $file
      * @param string $env
      */
