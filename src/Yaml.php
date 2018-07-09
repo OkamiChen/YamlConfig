@@ -24,11 +24,7 @@ class Yaml {
      * @param array $data
      * @param string $env
      */
-    static public function save($file, $data, $env = null) {
-
-        if (!$env) {
-            $env = env("APP_ENV");
-        }
+    static public function save($file, $data, $env = 'local') {
 
         $content = static::load($file, 'all');
         $content[$env] = $data;
@@ -46,10 +42,8 @@ class Yaml {
      * @param string $file
      * @param string $env
      */
-    static public function load($file, $env=null){
-        if(!$env){
-            $env    = env("APP_ENV");
-        }
+    static public function load($file, $env='local'){
+
         $yaml   = Basic::parseFile($file);
         if($env == 'all'){
             return $yaml;
