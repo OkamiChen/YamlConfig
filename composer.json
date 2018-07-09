@@ -16,7 +16,7 @@
         "symfony/yaml": "^4.1"
     },
     "autoload": {
-        "prs-4": {
+        "psr-4": {
             "OkamiChen\\YamlConfig\\":"src/"
         }
     }
