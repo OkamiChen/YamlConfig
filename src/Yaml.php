@@ -56,5 +56,22 @@ class Yaml {
         }
         return array_get($yaml, $env, []);
     }
+    
+    /**
+     * 新增环境
+     * @param string $file 文件
+     * @param string $from 源环境
+     * @param string $to 新环境
+     */
+    static public function copy($file, $from, $to){
+        
+        $config = self::load($file, 'all');
+        
+        if(isset($config[$from])){
+            return self::save($file, $config[$from], $to);
+        }
+        
+        return false;
+    }
 
 }
