@@ -28,7 +28,9 @@ class Yaml {
 
         $content = static::load($file, 'all');
         $content[$env] = $data;
+        
         $yaml = Basic::dump($content, 4);
+        
         if (!is_writable($file)) {
             $message = sprintf('File "%s" cannot be write.', $file);
             throw new ParseException($message);
@@ -45,10 +47,16 @@ class Yaml {
     static public function load($file, $env='local'){
 
         $yaml   = Basic::parseFile($file);
+        
         if($env == 'all'){
             return $yaml;
         }
-        return array_get($yaml, $env, []);
+        
+        if(isset($yaml[$env])){
+            return $yaml[$env];
+        }
+        
+        return [];
     }
     
     /**
